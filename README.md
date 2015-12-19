@@ -2,6 +2,17 @@
 
 Release Notes for the Librato Agent
 
+## Supported Platforms
+
+* Debian 8 (Jessie)
+* EL7 (RHEL, CentOS)
+* EL6 (RHEL, CentOS)
+* Ubuntu 15.10 (Wily)
+* Ubuntu 15.04 (Vivid)
+* ~~Ubuntu 14.10 (Utopic)~~ EOL
+* Ubuntu 14.04 LTS (Trusty)
+* Ubuntu 12.04 LTS (Precise)
+
 ## Releases
 
 ### 5.5.0-librato23
