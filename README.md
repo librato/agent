@@ -15,6 +15,10 @@ Release Notes for the Librato Agent
 
 ## Releases
 
+### 5.5.0-librato24
+
+Bump the default `Interval` setting to 60 seconds based on feedback from users.
+
 ### 5.5.0-librato23
 
 Disable some Varnish settings that were causing warnings on older distributions. This plugin is not yet recognized as an official integration (no server-side preconfigurations) but metrics will be received by Librato if `librato.varnish.*` is added to the user-defined whitelist.
