@@ -15,6 +15,10 @@ Release Notes for the Librato Agent
 
 ## Releases
 
+### 5.5.0-librato25
+
+Small bump to fix an inaccurate configuration comment.
+
 ### 5.5.0-librato24
 
 Bump the default `Interval` setting to 60 seconds based on feedback from users.
