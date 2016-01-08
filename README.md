@@ -15,6 +15,10 @@ Release Notes for the Librato Agent
 
 ## Releases
 
+### 5.5.0-librato26
+
+Adjust systemd configuration to allow `CAP_SETGID` and `CAP_SETUID`. This is needed for user/group privilege demotion by the Docker plugin.
+
 ### 5.5.0-librato25
 
 Small bump to fix an inaccurate configuration comment.
