@@ -15,6 +15,26 @@ Release Notes for the Librato Agent
 
 ## Releases
 
+### 5.5.0-librato27
+
+This release introduces container-level `blkio` (disk) metrics for Docker containers. The following metrics are now available:
+
+#### Bytes
+
+* librato.docker.blkio.io_service_bytes_async
+* librato.docker.blkio.io_service_bytes_read
+* librato.docker.blkio.io_service_bytes_sync
+* librato.docker.blkio.io_service_bytes_total
+* librato.docker.blkio.io_service_bytes_write
+
+#### Operations
+
+* librato.docker.blkio.io_serviced_async
+* librato.docker.blkio.io_serviced_read
+* librato.docker.blkio.io_serviced_sync
+* librato.docker.blkio.io_serviced_total
+* librato.docker.blkio.io_serviced_write
+
 ### 5.5.0-librato26
 
 Adjust systemd configuration to allow `CAP_SETGID` and `CAP_SETUID`. This is needed for user/group privilege demotion by the Docker plugin.
