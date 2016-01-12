@@ -15,6 +15,10 @@ Release Notes for the Librato Agent
 
 ## Releases
 
+### 5.5.0-librato28
+
+Adds support for our new NGINX Plus integration, with over 70 plugins courtesy of NGINX's [ngx_http_status_module](http://nginx.org/en/docs/http/ngx_http_status_module.html) module.
+
 ### 5.5.0-librato27
 
 This release introduces container-level `blkio` (disk) metrics for Docker containers. The following metrics are now available:
