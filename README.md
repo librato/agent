@@ -17,7 +17,7 @@ Release Notes for the Librato Agent
 
 ### 5.5.0-librato28
 
-Adds support for our new NGINX Plus integration, with over 70 plugins courtesy of NGINX's [ngx_http_status_module](http://nginx.org/en/docs/http/ngx_http_status_module.html) module.
+Adds support for our new NGINX Plus integration, with over 70 plugins courtesy of NGINX's [ngx_http_status_module](http://nginx.org/en/docs/http/ngx_http_status_module.html).
 
 ### 5.5.0-librato27
 
