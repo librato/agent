@@ -17,9 +17,13 @@ Release Notes for the Librato Agent
 
 ### 5.5.0-librato28
 
+_Jan 12, 2016_
+
 Adds support for our new NGINX Plus integration, with over 70 metrics courtesy of NGINX's [ngx_http_status_module](http://nginx.org/en/docs/http/ngx_http_status_module.html).
 
 ### 5.5.0-librato27
+
+_Jan 8, 2016_
 
 This release introduces container-level `blkio` (disk) metrics for Docker containers. The following metrics are now available:
 
@@ -41,32 +45,48 @@ This release introduces container-level `blkio` (disk) metrics for Docker contai
 
 ### 5.5.0-librato26
 
+_Jan 7, 2016_
+
 Adjust systemd configuration to allow `CAP_SETGID` and `CAP_SETUID`. This is needed for user/group privilege demotion by the Docker plugin.
 
 ### 5.5.0-librato25
+
+_Dec 30, 2015_
 
 Small bump to fix an inaccurate configuration comment.
 
 ### 5.5.0-librato24
 
+_Dec 29, 2015_
+
 Bump the default `Interval` setting to 60 seconds based on feedback from users.
 
 ### 5.5.0-librato23
+
+_Dec 9, 2015_
 
 Disable some Varnish settings that were causing warnings on older distributions. This plugin is not yet recognized as an official integration (no server-side preconfigurations) but metrics will be received by Librato if `librato.varnish.*` is added to the user-defined whitelist.
 
 ### 5.5.0-librato22
 
+_Dec 8, 2015_
+
 Fix `service` path for EL6.
 
 ### 5.5.0-librato21
+
+_Dec 8, 2015_
 
 Enable the `--deb-no-default-config-files` flag for all deb packages. Needed to keep our configuration in `/opt/collectd/etc` without warnings by Debian.
 
 ### 5.5.0-librato20
 
+_Nov 13, 2015_
+
 Officially support the Memcached plugin. The plugin has been patched to return `hostname_g` as the host rather than the service address. This adheres more closely to Librato's dynamic source convention. Also, the Node/Instance will be appended to the source.
 
 ### 5.5.0-librato19
+
+_Nov 6, 2015_
 
 Introducing support for EL7 and Ubuntu Wily.
