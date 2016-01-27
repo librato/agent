@@ -15,6 +15,12 @@ Release Notes for the Librato Agent
 
 ## Releases
 
+### 5.5.0-librato29
+
+_Jan 27, 2016_
+
+Update the Docker plugin to accommodate the breaking Docker stats API changes for network metrics introduced in API version 1.21.
+
 ### 5.5.0-librato28
 
 _Jan 12, 2016_
