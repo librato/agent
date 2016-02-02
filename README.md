@@ -7,6 +7,7 @@ Release Notes for the Librato Agent
 * Debian 8 (Jessie)
 * EL7 (RHEL, CentOS)
 * EL6 (RHEL, CentOS)
+* Amazon Linux 2015.09
 * Ubuntu 15.10 (Wily)
 * Ubuntu 15.04 (Vivid)
 * ~~Ubuntu 14.10 (Utopic)~~ EOL
