@@ -16,6 +16,12 @@ Release Notes for the Librato Agent
 
 ## Releases
 
+### 5.5.0-librato30
+
+_Feb 24, 2016_
+
+Instead of reporting absolute values for bytes ("complex") and inodes, we have disabled both of those and now report percentages by default instead. This change results in fewer, yet more useful, disk capacity metrics for the user.
+
 ### 5.5.0-librato29
 
 _Jan 27, 2016_
