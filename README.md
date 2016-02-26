@@ -16,6 +16,18 @@ Release Notes for the Librato Agent
 
 ## Releases
 
+### 5.5.0-librato31
+
+_Feb 26, 2016_
+
+This release introduces a handful of new Docker metrics for tracking container counts by state and total image count.
+
+* `librato.docker.images.total`
+* `librato.docker.containers.total`
+* `librato.docker.containers.running`
+* `librato.docker.containers.stopped`
+* `librato.docker.containers.paused`
+
 ### 5.5.0-librato30
 
 _Feb 24, 2016_
