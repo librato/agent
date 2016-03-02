@@ -16,6 +16,12 @@ Release Notes for the Librato Agent
 
 ## Releases
 
+### 5.5.0-librato32
+
+_Mar 2, 2016_
+
+The previous release added five new metrics to track overall container state and image counts within Docker. Unfortunately it would report one copy of each metric (stream) for every container running on the host, resulting in N streams instead of 1 global (hostname) stream per metric. This release fixes that oversight.
+
 ### 5.5.0-librato31
 
 _Feb 26, 2016_
