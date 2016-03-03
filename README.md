@@ -16,6 +16,12 @@ Release Notes for the Librato Agent
 
 ## Releases
 
+### 5.5.0-librato33
+
+_Mar 3, 2016_
+
+Officially support the Apache plugin. The plugin has been patched to return hostname_g as the host rather than the service address. This adheres more closely to Librato's dynamic source convention. Also, the Node/Instance will be appended to the source.
+
 ### 5.5.0-librato32
 
 _Mar 2, 2016_
