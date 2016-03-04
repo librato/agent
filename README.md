@@ -16,6 +16,19 @@ Release Notes for the Librato Agent
 
 ## Releases
 
+### 5.5.0-librato34
+
+_Mar 4, 2016_
+
+This release enables the native Zookeeper plugin. By default, the plugin will look for a Zookeeper service running on localhost TCP port 2181. Change this by editing `/opt/collectd/etc/collectd.conf.d/zookeeper.conf`, as shown below.
+
+```
+<Plugin "zookeeper">  
+   Host "127.0.0.1"
+   Port "2181"
+</Plugin>
+```
+
 ### 5.5.0-librato33
 
 _Mar 3, 2016_
