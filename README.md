@@ -16,6 +16,12 @@ Release Notes for the Librato Agent
 
 ## Releases
 
+### 5.5.0-librato34
+
+_Mar 3, 2016_
+
+Officially support the Zookeeper plugin. By default, it attempts to monitor *localhost:2181* but this can be changed by editing /opt/collectd/etc/collectd.conf.d/zookeeper.conf.
+
 ### 5.5.0-librato33
 
 _Mar 3, 2016_
