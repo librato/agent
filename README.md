@@ -23,6 +23,7 @@ _Mar 4, 2016_
 This release enables the native Zookeeper plugin. By default, the plugin will look for a Zookeeper service running on localhost TCP port 2181. Change this by editing `/opt/collectd/etc/collectd.conf.d/zookeeper.conf`, as shown below.
 
 ```
+LoadPlugin zookeeper
 <Plugin "zookeeper">  
    Host "127.0.0.1"
    Port "2181"
