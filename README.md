@@ -18,6 +18,12 @@ Release Notes for the Librato Agent
 
 ### 5.5.0-librato34
 
+_Mar 17, 2016_
+
+This release enables support for HAProxy. The plugin has been patched with Michael Leinartas' [collectd-haproxy.py](https://github.com/mleinart/collectd-haproxy) plugin. The plugin has also been patched to prefix metrics with `backend` and `frontend`, depending on the source of the metrics and the proxy type. Health-specific metrics, such as `uptime_seconds`, are not prefixed. This adheres more closely to Librato's dynamic source convention. We are also appending the name of the proxy to the source.
+
+### 5.5.0-librato34
+
 _Mar 4, 2016_
 
 This release enables the native Zookeeper plugin. By default, the plugin will look for a Zookeeper service running on localhost TCP port 2181. Change this by editing `/opt/collectd/etc/collectd.conf.d/zookeeper.conf`, as shown below.
