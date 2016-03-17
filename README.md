@@ -20,7 +20,7 @@ Release Notes for the Librato Agent
 
 _Mar 17, 2016_
 
-This release enables support for HAProxy. The plugin has also been patched to prefix metrics with `backend` and `frontend`, depending on the source of the metrics and the proxy type. Health-specific metrics, such as `uptime_seconds`, are not prefixed. This adheres more closely to Librato's dynamic source convention. We are also appending the name of the proxy to the source.
+This release enables support for the HAProxy plugin. The plugin has also been patched to prefix metrics with `backend` and `frontend`, depending on the source of the metrics and the proxy type. Health-specific metrics, such as `uptime_seconds`, are not prefixed. This adheres more closely to Librato's dynamic source convention. We are also appending the name of the proxy to the source.
 
 ### 5.5.0-librato34
 
