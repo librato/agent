@@ -16,7 +16,42 @@ Release Notes for the Librato Agent
 
 ## Releases
 
-### 5.5.0-librato34
+### 5.5.0-librato36
+
+_Mar 21, 2016_
+
+This release enables the native MySQL plugin and patches it to report the following additional metrics.
+
+* `librato.mysql.gauge.tmp_disk_tables` - Number of internal, on-disk temporary tables created
+* `librato.mysql.gauge.tmp_files` - Number of temporary files created
+* `librato.mysql.gauge.tmp_tables` - Number of internal (non-persistent) temporary tables
+* `librato.mysql.counter.total_queries` - Number of statements executed, including stored procedures
+* `librato.mysql.counter.slow_queries` - Number of queries that take more than the configured number of seconds
+* `librato.mysql.gauge.mysql_uptime` - Number of seconds the server has been up
+* `librato.mysql.counter.total_connections` - Number of connection attempts made to the server
+* `librato.mysql.counter.aborted_clients` - Number of connection that weren't closed properly by the client
+* `librato.mysql.counter.aborted_connects` - Number of failed attempts to connect to the server
+* `librato.mysql.gauge.qcache_free_blocks` - Number of free memory blocks in the query cache
+* `librato.mysql.gauge.qcache_total_blocks` - Total number of memory blocks in the query cache
+* `librato.mysql.gauge.qcache_free_memory` - Amount of free memory in the query cache
+
+A default configuration file also gets installed under `/opt/collectd/etc/collectd.conf.d/mysql.conf`, and looks as follows. Edit it according to your MySQL server deployment. Please see [MySQL Plugin](https://collectd.org/wiki/index.php/Plugin:MySQL) for more details.
+
+```
+LoadPlugin mysql
+<Plugin "mysql">
+  <Database "mydb">
+    Host "127.0.0.1"
+    User "root"
+    Password ""
+    Port 3306
+    MasterStats true
+    InnodbStats true
+  </Database>
+</Plugin>
+```
+
+### 5.5.0-librato35
 
 _Mar 17, 2016_
 
