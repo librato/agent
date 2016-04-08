@@ -16,6 +16,14 @@ Release Notes for the Librato Agent
 
 ## Releases
 
+### 5.5.0-librato37
+
+_Apr 8, 2016_
+
+This release performs a "reset" of our Varnish configuration to disable a number of module classes providing metrics that are largely used only for debugging or deep troubleshooting. The resulting set of metrics is common across all supported platforms, meaning we no longer need specialized patches to support Varnish across different OS releases.
+
+This also means we're getting closer to an official Varnish integration. :wink: 
+
 ### 5.5.0-librato36
 
 _Mar 21, 2016_
