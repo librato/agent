@@ -7,7 +7,8 @@ Release Notes for the Librato Agent
 * Debian 8 (Jessie)
 * EL7 (RHEL, CentOS)
 * EL6 (RHEL, CentOS)
-* Amazon Linux 2015.09
+* Amazon Linux 2016.03
+* ~~Amazon Linux 2015.09~~ EOL
 * Ubuntu 15.10 (Wily)
 * Ubuntu 15.04 (Vivid)
 * ~~Ubuntu 14.10 (Utopic)~~ EOL
@@ -15,6 +16,14 @@ Release Notes for the Librato Agent
 * Ubuntu 12.04 LTS (Precise)
 
 ## Releases
+
+### 5.5.0-librato38
+
+_Apr 18, 2016_
+
+This release corrects a number of dependencies that were never moved from recommended or suggested to actual hard dependencies, particularly those libraries for python, mysqlclient, and memcached.
+
+It also marks the introduction of support for Amazon Linux 2016.03. For all practical purposes the package should be universal across 2015.09 and 2016.03, but we're now officially treating 2015.09 as deprecated.
 
 ### 5.5.0-librato37
 
