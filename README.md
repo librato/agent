@@ -17,6 +17,31 @@ Release Notes for the Librato Agent
 
 ## Releases
 
+### 5.5.0-librato39
+
+_Apr 19, 2016_
+
+This release adds Elasticsearch monitoring capabilities to Librato Agent. Elasticsearch versions 2.x, 1.x and 0.90
+are supported. A default configuration file is provided at /opt/collectd/etc/collectd.conf.d/elasticsearch.conf.
+Please review and edit the following section to match your environment.
+
+The plugin will attempt to connect to Elasticsearch over http://127.0.0.1:9200. Update the Url configuration
+parameter to match the network.host setting in your Elasticsearch configuration file. By default, the cluster
+name will serve as the plugin instance for the reported metrics. Use the Name configuration parameter to
+override this value.
+
+<Plugin "python">
+    ModulePath "/opt/collectd/share/collectd/"
+
+    Import "collectd-elasticsearch"
+
+    <Module "collectd-elasticsearch">
+        #Url "http://127.0.0.1:9200"
+        #Name "mycluster"
+        #Verbose true
+    </Module>
+</Plugin>
+
 ### 5.5.0-librato38
 
 _Apr 18, 2016_
