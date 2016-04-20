@@ -24,6 +24,8 @@ _Apr 19, 2016_
 
 **Update:** This release also introduces support for Debian 7 (wheezy).
 
+**Update #2:** This release _also_ adds support for the i386 architecture with Debian 8 (jessie). This was an oversight on our part previously.
+
 This release adds Elasticsearch monitoring capabilities to Librato Agent. Elasticsearch versions 2.x, 1.x and 0.90
 are supported. A default configuration file is provided at /opt/collectd/etc/collectd.conf.d/elasticsearch.conf.
 Please review and edit the following section to match your environment.
