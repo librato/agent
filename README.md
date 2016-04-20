@@ -4,12 +4,12 @@ Release Notes for the Librato Agent
 
 ## Supported Platforms
 
+* Amazon Linux 2016.03
+* ~~Amazon Linux 2015.09~~ EOL
 * Debian 8 (Jessie)
 * Debian 7 (Wheezy)
 * EL7 (RHEL, CentOS)
 * EL6 (RHEL, CentOS)
-* Amazon Linux 2016.03
-* ~~Amazon Linux 2015.09~~ EOL
 * Ubuntu 15.10 (Wily)
 * Ubuntu 15.04 (Vivid)
 * ~~Ubuntu 14.10 (Utopic)~~ EOL
@@ -21,6 +21,8 @@ Release Notes for the Librato Agent
 ### 5.5.0-librato39
 
 _Apr 19, 2016_
+
+**Update:** This release also introduces support for Debian 7 (wheezy).
 
 This release adds Elasticsearch monitoring capabilities to Librato Agent. Elasticsearch versions 2.x, 1.x and 0.90
 are supported. A default configuration file is provided at /opt/collectd/etc/collectd.conf.d/elasticsearch.conf.
@@ -44,8 +46,6 @@ override this value.
     </Module>
 </Plugin>
 ```
-
-**Update:** This release also introduces support for Debian 7 (wheezy).
 
 ### 5.5.0-librato38
 
