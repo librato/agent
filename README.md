@@ -5,6 +5,7 @@ Release Notes for the Librato Agent
 ## Supported Platforms
 
 * Debian 8 (Jessie)
+* Debian 7 (Wheezy)
 * EL7 (RHEL, CentOS)
 * EL6 (RHEL, CentOS)
 * Amazon Linux 2016.03
@@ -30,6 +31,7 @@ parameter to match the network.host setting in your Elasticsearch configuration 
 name will serve as the plugin instance for the reported metrics. Use the Name configuration parameter to
 override this value.
 
+```
 <Plugin "python">
     ModulePath "/opt/collectd/share/collectd/"
 
@@ -41,6 +43,9 @@ override this value.
         #Verbose true
     </Module>
 </Plugin>
+```
+
+**Update:** This release also introduces support for Debian 7 (wheezy).
 
 ### 5.5.0-librato38
 
