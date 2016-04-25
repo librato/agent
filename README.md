@@ -18,6 +18,43 @@ Release Notes for the Librato Agent
 
 ## Releases
 
+### 5.5.0-librato40
+
+_Apr 25, 2016_
+
+This release enables the native PostgreSQL queries to the Librato Agent. A number of "canned queries" are defined in `/opt/collectd/share/collectd/postgresql_default.conf` that make it easy to collect per-database statistics for memory use, indexing performance, tuple activity (inserts, updates, deletes, etc), commits and rollbacks, and much more.
+
+The packaged configuration will attempt to gather statistics for the native `postgres` database using the UNIX socket. In most cases this will not work, since PostgreSQL uses [peer](http://www.postgresql.org/docs/9.5/static/auth-methods.html#AUTH-PEER) authentication for the UNIX socket. Adjust your PostgreSQL [authentication](http://www.postgresql.org/docs/9.5/static/auth-methods.html) or Librato Agent plugin settings in `/opt/collectd/etc/collectd.conf.d/postgresql.conf` as needed.
+
+```
+LoadPlugin postgresql
+<Plugin postgresql>
+  <Database postgres>
+    Host "/var/run/postgresql"
+    Port "5432"
+    User "postgres"
+  </Database>
+  #<Database foo>
+  #  Instance "custom-name"
+  #  Host "127.0.0.1"
+  #  Port "5432"
+  #  User "username"
+  #  Password "password"
+  #  SSLMode "prefer"
+  #</Database>
+</Plugin>
+```
+
+The following queries are implicitly included for any `Database` block when no `Query` definitions are explicitly defined. Adding any explicit `Query` definitions will override the default behavior, so make sure to include the entire list below or any subsets as desired.
+
+* `Query backends`
+* `Query transactions`
+* `Query queries`
+* `Query query_plans`
+* `Query table_states`
+* `Query disk_io`
+* `Query disk_usage`
+
 ### 5.5.0-librato39
 
 _Apr 19, 2016_
@@ -27,12 +64,12 @@ _Apr 19, 2016_
 **Update #2:** This release _also_ adds support for the i386 architecture with Debian 8 (jessie). This was an oversight on our part previously.
 
 This release adds Elasticsearch monitoring capabilities to Librato Agent. Elasticsearch versions 2.x, 1.x and 0.90
-are supported. A default configuration file is provided at /opt/collectd/etc/collectd.conf.d/elasticsearch.conf.
+are supported. A default configuration file is provided at `/opt/collectd/etc/collectd.conf.d/elasticsearch.conf`.
 Please review and edit the following section to match your environment.
 
-The plugin will attempt to connect to Elasticsearch over http://127.0.0.1:9200. Update the Url configuration
+The plugin will attempt to connect to Elasticsearch over http://127.0.0.1:9200. Update the `Url` configuration
 parameter to match the network.host setting in your Elasticsearch configuration file. By default, the cluster
-name will serve as the plugin instance for the reported metrics. Use the Name configuration parameter to
+name will serve as the plugin instance for the reported metrics. Use the `Name` configuration parameter to
 override this value.
 
 ```
