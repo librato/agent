@@ -45,9 +45,9 @@ LoadPlugin postgresql
 </Plugin>
 ```
 
-The following queries are implicitly included for any `Database` block when no `Query` definitions are explicitly defined. Adding any explicit `Query` definitions will override the default behavior, so make sure to include the entire list below or any subsets as desired.
+The following queries are enabled for the `postgres` database by default.
 
-* `Query backends`
+* `Query connections`
 * `Query transactions`
 * `Query queries`
 * `Query query_plans`
