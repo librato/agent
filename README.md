@@ -18,6 +18,12 @@ Release Notes for the Librato Agent
 
 ## Releases
 
+### 5.5.0-librato41
+
+_May 2, 2016_
+
+Release fixes unhandled python exceptions in NGINX Plus and Elasticsearch plugins.
+
 ### 5.5.0-librato40
 
 _Apr 25, 2016_
