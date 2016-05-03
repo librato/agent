@@ -10,6 +10,7 @@ Release Notes for the Librato Agent
 * Debian 7 (Wheezy)
 * EL7 (RHEL, CentOS)
 * EL6 (RHEL, CentOS)
+* Ubuntu 16.04 (Xenial)
 * Ubuntu 15.10 (Wily)
 * Ubuntu 15.04 (Vivid)
 * ~~Ubuntu 14.10 (Utopic)~~ EOL
@@ -17,6 +18,14 @@ Release Notes for the Librato Agent
 * Ubuntu 12.04 LTS (Precise)
 
 ## Releases
+
+### 5.5.0-librato42
+
+_May 3, 2016_
+
+First and foremost, this release introduces Ubuntu 16.04 ([Xenial Xerus](https://wiki.ubuntu.com/XenialXerus/ReleaseNotes)) as a supported platform.
+
+It also brings in an upstream fix to support Varnish 4.1 and some minor improvements to the systemd script.
 
 ### 5.5.0-librato41
 
