@@ -25,10 +25,10 @@ _May 4, 2016_
 
 This release adds MongoDB monitoring capabilities to Librato Agent. MongoDB versions 3.x and 2.x are supported.
 A default configuration file is provided at `/opt/collectd/etc/collectd.conf.d/mongodb.conf`.
-Please review and edit the following section to match your environment.
+Please review and edit it to match your environment.
 
 If necessary, update `Host` and `Port` to the host and port corresponding to your MongoDB instance.
-If authenication has been enabled for your MongoDB deployment, set `User` and `Password` to a
+If authentication has been enabled for your MongoDB deployment, set `User` and `Password` to a
 user who has access to the admin database. `Database` can optionally specify a space-separated
 list of additional databases to monitor. If set, `Database` must begin with `admin`.
 Use the `Name` configuration parameter to set the plugin instance for the reported metrics, which is
