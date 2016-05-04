@@ -19,6 +19,43 @@ Release Notes for the Librato Agent
 
 ## Releases
 
+### 5.5.0-librato43
+
+_May 4, 2016_
+
+This release adds MongoDB monitoring capabilities to Librato Agent. MongoDB versions 3.x and 2.x are supported.
+A default configuration file is provided at `/opt/collectd/etc/collectd.conf.d/mongodb.conf`.
+Please review and edit the following section to match your environment.
+
+If necessary, update `Host` and `Port` to the host and port corresponding to your MongoDB instance.
+If authenication has been enabled for your MongoDB deployment, set `User` and `Password` to a
+user who has access to the admin database. `Database` can optionally specify a space-separated
+list of additional databases to monitor. If set, `Database` must begin with `admin`.
+Use the `Name` configuration parameter to set the plugin instance for the reported metrics, which is
+`mongodb` by default.
+
+```
+<LoadPlugin python>
+  Globals true
+</LoadPlugin>
+
+<Plugin python>
+  ModulePath "/opt/collectd/share/collectd"
+  ModulePath "/opt/collectd/share/collectd/pymongo.egg"
+
+  Import "collectd-mongodb"
+
+  <Module "collectd-mongodb">
+    # Host "127.0.0.1"
+    # Port "27017"
+    # User "username"
+    # Password "password"
+    # Database "admin"
+    # Name "mongodb"
+  </Module>
+</Plugin>
+```
+
 ### 5.5.0-librato42
 
 _May 3, 2016_
