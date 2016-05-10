@@ -19,6 +19,23 @@ Release Notes for the Librato Agent
 
 ## Releases
 
+### 5.5.0-librato44
+
+_May 10, 2016_
+
+This release fixes an issue where our Apache plugin would ignore metrics made available on Apache versions 2.4.13 or higher.
+
+We are also changing the Apache plugin's configuration so the default url for mod_status is http://localhost/server-status?auto. This aligns our plugin with Apache's documentation and most distribution defaults.
+
+```
+LoadPlugin "apache"
+<Plugin "apache">
+   <Instance "apache">
+       URL "http://localhost/server-status?auto"
+   </Instance>
+</Plugin>
+```
+
 ### 5.5.0-librato43
 
 _May 4, 2016_
