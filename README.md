@@ -23,9 +23,9 @@ Release Notes for the Librato Agent
 
 _May 10, 2016_
 
-This release fixes an issue where our Apache plugin would ignore a majority of the metrics provided by Apache versions 2.4.13 or higher.
+This release fixes an issue where the Apache plugin would ignore some of the metrics reported by Apache versions 2.4.13 or newer.
 
-We are also changing the Apache plugin's configuration so the default url for mod_status is `http://localhost/server-status?auto`. This aligns our plugin with Apache's documentation and most distribution defaults.
+We are also changing the Apache plugin's configuration so the default url for `mod_status` is `http://localhost/server-status?auto`. This aligns our plugin with Apache's documentation and most distribution defaults.
 
 ```
 LoadPlugin "apache"
