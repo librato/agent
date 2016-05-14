@@ -19,6 +19,36 @@ Release Notes for the Librato Agent
 
 ## Releases
 
+### 5.5.0-librato45
+
+_May 13, 2016_
+
+This release enables the collectd GenericJMX plugin to gather Managed Beans (MBeans) metrics from an MBeanServer using Java Management Extensions (JMX). Librato Agent provides a default configuration file which is located at `/opt/collectd/etc/collectd.conf.d/jvm.conf`:
+
+```
+LoadPlugin java
+
+Include "/opt/collectd/share/collectd/jvm_default.conf"
+
+<Plugin "java">
+  <Plugin "GenericJMX">
+    <Connection>
+      Host "localhost"
+      ServiceURL "service:jmx:rmi:///jndi/rmi://localhost:17264/jmxrmi"
+      Collect "memory_heap"
+      Collect "memory_nonheap"
+      Collect "classes"
+      Collect "threads"
+      Collect "compilation"
+      Collect "garbage_collector"
+      Collect "memory_pool"
+    </Connection>
+  </Plugin>
+</Plugin>
+```
+
+The configuration of the GenericJMX plugin consists of a `Connection` block which specifies how to connect to an MBeanServer and what data to retrieve. `ServiceURL` specifies the MBeanServer to query and the multiple `Collect` blocks specify which of the MBean blocks to gather with this connection. A set of default metrics are provided  at `/opt/collectd/share/collectd/jvm_default.conf`.
+
 ### 5.5.0-librato44
 
 _May 10, 2016_
