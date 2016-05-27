@@ -19,6 +19,18 @@ Release Notes for the Librato Agent
 
 ## Releases
 
+### 5.5.0-librato47
+
+_May 26, 2016_
+
+This release updates CentOS 6 hard runtime dependencies.
+
+### 5.5.0-librato46
+
+_May 18, 2016_
+
+This release addresses an issue in the MongoDB plugin where negative replication lags were being reported.
+
 ### 5.5.0-librato45
 
 _May 13, 2016_
