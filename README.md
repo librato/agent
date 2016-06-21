@@ -19,6 +19,12 @@ Release Notes for the Librato Agent
 
 ## Releases
 
+### 5.5.0-librato48
+
+_June 21, 2016_
+
+This release fixes a bug on Fedora, where running ```yum update``` was causing vanilla collectd to get installed.
+
 ### 5.5.0-librato47
 
 _May 26, 2016_
