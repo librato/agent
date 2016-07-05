@@ -19,6 +19,12 @@ Release Notes for the Librato Agent
 
 ## Releases
 
+### 5.5.0-librato49
+
+_July 05, 2016_
+
+This release fixes a bug on CentOS 6, where the Docker plugin failed to run due to a Python 2.6 compatibility issue.
+
 ### 5.5.0-librato48
 
 _June 21, 2016_
