@@ -19,6 +19,16 @@ Release Notes for the Librato Agent
 
 ## Releases
 
+### 5.5.0-librato50.172
+
+_July 14, 2016__
+
+This release breaks the single `collectd` package into two packages: `collectd` and `collectd-core` and deprecates 32bit support for the Librato Agent (no 32bit packages were built for this release; if you need 32bit support, please use `5.5.0-librato49`).
+
+`collectd-core` contains the core collectd system, while `collectd` contains the default configs that allow you to get up and running quickly. As `collectd-core` does not ship with default plugin configs, this makes it perfect for using with config management tools.
+
+Additionally, this release adopts a new versioning scheme by appending a minor version to the Librato version number.
+
 ### 5.5.0-librato49
 
 _July 05, 2016_
