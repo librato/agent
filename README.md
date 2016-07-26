@@ -19,8 +19,29 @@ Release Notes for the Librato Agent
 
 ## Releases
 
-### 5.5.0-librato50.172
+### 5.5.0-librato51.251
 
+_July 26, 2016__
+
+This is a maintenance release, which addresses the following bugs in earlier versions of Librato Agent.
+
+* A delay in reporting Docker metrics, which caused gaps to show up in the curated dashboard.
+* Issues upgrading from earlier (monolithic) Librato Agent packages to the split version on Debian and Ubuntu.
+* An issue on CentOS 6 and Amazon Linux, where doing an upgrade ended up removing the init script. This issue will
+  still surface the very first time users upgrade to version 51.251 and can be resolved by manually copying the init
+  script over after an upgrade.
+```
+sudo cp /opt/collectd/share/collectd/init/redhat-sysv/collectd /etc/init.d/collectd
+sudo chmod +x /etc/init.d/collectd
+Sudo service collectd restart
+```
+* An issue on CentOS 7 and Fedora 23, where uninstalling Librato Agent didn't clean up the init script. This issue will
+  still surface the very first time users upgrade to version 51.251 and can be resolved by manual deletion.
+```
+sudo rm -f /lib/systemd/system/collectd.service
+```
+
+### 5.5.0-librato49
 _July 14, 2016__
 
 This release breaks the single `collectd` package into two packages: `collectd` and `collectd-core` and deprecates 32bit support for the Librato Agent (no 32bit packages were built for this release; if you need 32bit support, please use `5.5.0-librato49`).
