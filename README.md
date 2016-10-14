@@ -10,6 +10,7 @@ Release Notes for the Librato Agent
 * Debian 7 (Wheezy)
 * EL7 (RHEL, CentOS)
 * EL6 (RHEL, CentOS)
+* Fedora 23
 * Ubuntu 16.04 LTS (Xenial)
 * Ubuntu 15.10 (Wily)
 * Ubuntu 15.04 (Vivid)
