@@ -22,7 +22,7 @@ Release Notes for the Librato Agent
 
 ### 5.5.0-librato51.251
 
-_July 26, 2016__
+_July 26, 2016_
 
 This is a maintenance release, which addresses the following bugs in earlier versions of Librato Agent.
 
@@ -43,7 +43,7 @@ sudo rm -f /lib/systemd/system/collectd.service
 ```
 
 ### 5.5.0-librato49
-_July 14, 2016__
+_July 14, 2016_
 
 This release breaks the single `collectd` package into two packages: `collectd` and `collectd-core` and deprecates 32bit support for the Librato Agent (no 32bit packages were built for this release; if you need 32bit support, please use `5.5.0-librato49`).
 
