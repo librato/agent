@@ -22,11 +22,11 @@ Release Notes for the Librato Agent
 
 ## Releases
 
-### 5.1.1-librato1.413
+### 5.7.1-librato1.413
 
 _June 16, 2017_
 
-This release upgrades the agent from upstream collectd 5.5.0 to 5.7.1, removed support for Fedora and added support for Amazon Linux 2016.09 and 2017.03.
+This release upgrades the agent from upstream collectd 5.5.0 to 5.7.1, removes support for Fedora and adds support for Amazon Linux 2016.09 and 2017.03.
 
 Notable changes from upstream collectd 5.7.1 include:
 * A new plugin for Prometheus
