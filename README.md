@@ -4,13 +4,15 @@ Release Notes for the Librato Agent
 
 ## Supported Platforms
 
+* Amazon Linux 2017.03
+* Amazon Linux 2016.09
 * Amazon Linux 2016.03
 * ~~Amazon Linux 2015.09~~ EOL
 * Debian 8 (Jessie)
 * Debian 7 (Wheezy)
 * EL7 (RHEL, CentOS)
 * EL6 (RHEL, CentOS)
-* Fedora 23
+* ~~Fedora 23~~ EOL
 * Ubuntu 16.04 LTS (Xenial)
 * Ubuntu 15.10 (Wily)
 * Ubuntu 15.04 (Vivid)
@@ -19,6 +21,32 @@ Release Notes for the Librato Agent
 * Ubuntu 12.04 LTS (Precise)
 
 ## Releases
+
+### 5.1.1-librato1.413
+
+_June 16, 2017_
+
+This release upgrades the agent from upstream collectd 5.5.0 to 5.7.1, removed support for Fedora and added support for Amazon Linux 2016.09 and 2017.03.
+
+Notable changes from upstream collectd 5.7.1 include:
+* A new plugin for Prometheus
+* Improvements and metrics for MySQL plugin
+* Support for Varnish 4
+* Significant changes in architecture of write HTTP plugin:
+  * Multi-instance support of this plugin has been improved. The `<URL "url">` block has been deprecated in favor of `<Node "identifier">`
+  * Several TLS-related configuration options have been added
+  * The `LowSpeedLimit` and `Timeout` options allow to reset slow/stalled network connections
+  * The size of the payload posted to the HTTP server can now be controlled with the `BufferSize` option.
+  * Freeing of memory holding HTTP headers during shutdown has been fixed.
+  * A logic error when checking the correctness of the segmentation fault
+  * A bug has been fixed that lead to flush callbacks
+  * A KairosDB formatter has been added
+  * The `LogHttpError` option has been added.
+  * The new `Headers` option allows setting custom HTTP headers in outgoing requests
+
+This release also provides the hiredis library as packages for:
+* CentOS 6
+* Amazon Linux 2016.03, 2016.09, 2017.03
 
 ### 5.5.0-librato51.251
 
